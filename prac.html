@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="programming">programming languages</label>
+    <select id="programming" name="programming">
+        <optgroup label="java">
+            <option value="springboot">springboot</option>
+            <option value="springboot">spring</option>
+            <option value="springboot">Oauth</option>
+        </optgroup>
+        <optgroup label="javascript">
+            <option value="nodejs">nodejs</option>
+            <option value="nodejs">vue</option>
+            <option value="nodejs">angular</option>
+        </optgroup>
+    </select>
+    <input type="button" value="submit" onclick="drop()">
+
+    <hr>
+    <form>
+        <fieldset>
+            <legend>autocomplete(datalist)</legend>
+            <input list="comp">
+            <datalist id="comp">
+                <option value="java"></option>
+                <option value="python"></option>
+                <option value="js"></option>
+                <option value="ts"></option>
+            </datalist>
+
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
+
+<script>
+    function drop(){
+        var dropdownvalue = document.querySelector("#programming").value;
+        console.log(dropdownvalue);
+    }
+</script>

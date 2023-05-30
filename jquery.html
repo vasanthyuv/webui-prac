@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div">
+        <p>1Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur provident labore aut dolorum doloremque
+            distinctio, veritatis, ipsum natus cum mollitia, tempora totam? Ad facilis pariatur rem hic magni cumque
+            dolore?</p>
+        <p>2Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur provident labore aut dolorum doloremque
+            distinctio, veritatis, ipsum natus cum mollitia, tempora totam? Ad facilis pariatur rem hic magni cumque
+            dolore?</p>
+        <p id="p3">3Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur provident labore aut dolorum doloremque
+            distinctio, veritatis, ipsum natus cum mollitia, tempora totam? Ad facilis pariatur rem hic magni cumque
+            dolore?</p>
+    </div>
+    <input type="button" value="change" onclick="color()">
+    <input type="button" value="jquery" id="jq">
+    <input type="button" value="append" id="ap">
+    <input type="button" value="prepend" id="pr">
+    <input type="button" value="remove" id="rm">
+</body>
+
+</html>
+
+<!--<script>
+    function color(){
+    var parent = document.getElementById("div").innerHTML
+   var last = parent.lastElementChild
+   var txt =last.textContent
+   console.log(txt);
+
+  
+    }
+ 
+</script>-->
+
+<!---jquery-->
+
+<script>
+    $(document).ready(function(){
+        $("#jq").click(function(){
+            $("#div").css({"background-color":"blue","color":"white"})
+        })
+
+        $("#ap").click(function(){
+            $("#p3").append(" <strong>i have added the last line</strong>")
+        })
+
+        $("#pr").click(function(){
+            $("#p3").prepend("<i>i have added into first</i>")
+
+        })
+        $("#rm").click(function(){
+            $("#p3").remove()
+        })
+
+    })
+</script>
+

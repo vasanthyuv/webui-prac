@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+    <div id="d1">
+        <p>first Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti deleniti quas! Delectus ipsam ea
+            expedita nulla veritatis a, odit molestias, excepturi illum cupiditate laborum. Eius recusandae ullam
+            asperiores quod.</p>
+        <p>second Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti deleniti quas! Delectus ipsam ea
+            expedita nulla veritatis a, odit molestias, excepturi illum cupiditate laborum. Eius recusandae ullam
+            asperiores quod.</p>
+        <p>thirdLorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corrupti deleniti quas! Delectus ipsam ea
+            expedita nulla veritatis a, odit molestias, excepturi illum cupiditate laborum. Eius recusandae ullam
+            asperiores quod.</p>
+    </div>
+    <input type="button" value="change" id="but" onclick="change()">
+    <input type="button" value="usingeventlistner" id="but1">
+</body>
+
+</html>
+
+<script>
+function change(){
+    
+    
+       var div =  document.getElementById("d1");
+       div.style.color="black"
+
+       div.style.backgroundColor="red"
+        
+    }
+
+    document.getElementById("but1").addEventListener("click",first);
+    function first(){
+        var div =  document.getElementById("d1");
+       div.style.color="blue"
+       div.style.backgroundColor="green"
+        
+    }
+    
+/*last element child*/
+
+var parent = document.getElementById("d1");
+var last = parent.lastElementChild;
+var txt = last.textContent;
+console.log(txt);
+/* first element child*/
+var first = parent.firstElementChild;
+var txt1 = first.textContent;
+console.log(txt1);
+
+/* every child using children[] */
+var second = parent.children[1];
+var txt3 = second.textContent;
+console.log(txt3);
+
+/*creating element and textnode*/
+var newp = document.getElementById("demo")
+var para = document.createElement("p");
+var txt = document.createTextNode("this is a new created paragraph");
+para.appendChild(txt);
+
+newp.appendChild(para);
+console.log(newp);
+
+
+
+</script>
