@@ -25,7 +25,7 @@
     <input type="button" value="submit" onclick="drop()">
 
     <hr>
-    <form>
+  <!---  <form>
         <fieldset>
             <legend>autocomplete(datalist)</legend>
             <input list="comp">
@@ -38,8 +38,19 @@
 
         </fieldset>
 
-    </form>
+    </form>-->
+<!---radio-->
+<form>
+    <label>gender</label>
+    <input type="radio" id="radiobut" value="male">male
+    <input type="radio" id="radiobut" value="female">female
+    <input type="button" value="submit" onclick="radio()"><br>
 
+    <!--checkbox-->
+    <input type="checkbox" id="c" value="c">c
+    <input type="checkbox" id="c++" value="c++">c++
+    <input type="checkbox" id="js"  value="js">js
+</form>
 </body>
 
 </html>
@@ -48,5 +59,26 @@
     function drop(){
         var dropdownvalue = document.querySelector("#programming").value;
         console.log(dropdownvalue);
+    }
+
+    function radio(){
+        var gender = document.getElementById("radiobut").value;
+        console.log(gender);
+        var cprogram = document.getElementById("c");
+        var cplusprogram = document.getElementById("c++");
+        var jsprogram = document.getElementById("js");
+
+     if(cprogram.checked){
+        console.log(cprogram.value);
+     }
+     if(cprogram.checked){
+        console.log(cplusprogram.value);
+     }
+     if(cprogram.checked){
+        console.log(jsprogram.value);
+     }
+      
+     
+      
     }
 </script>
